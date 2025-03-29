@@ -1,7 +1,16 @@
 import axios from "axios";
 
 const API_URL = "https://reqres.in/api";
+
 const STORAGE_KEY = "users";
+export const loginUser = async (email, password) => {
+  try {
+    const res = await axios.post(`${API_URL}/login`, { email, password });
+    return res.data; 
+  } catch (error) {
+    throw error.response?.data?.error || "Login failed";
+  }
+};
 
 //  Get Users from API & Store in LocalStorage
 export const getUsers = async () => {
