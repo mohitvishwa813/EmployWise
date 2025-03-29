@@ -37,3 +37,10 @@
  
    ```bash
    npm run dev
+## 🔑 Login Credentials
+Use the following credentials for testing:
+
+
+- Email:  eve.holt@reqres.in
+- Password: cityslicka
+
